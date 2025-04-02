@@ -1,53 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miraculous+</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #0d1117; color: white; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: #161b22; }
-        nav ul { list-style: none; display: flex; gap: 15px; }
-        nav a { color: white; text-decoration: none; font-weight: bold; }
-        .banner { text-align: center; padding: 50px; background: linear-gradient(135deg, #ff4d00, #ff7700); }
-        .catalogo { padding: 20px; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-        .video-item img { width: 100%; border-radius: 10px; }
-        footer { text-align: center; padding: 20px; background-color: #161b22; }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #161b22;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff7700;
+        }
+        .banner {
+            text-align: center;
+            padding: 60px;
+            background: linear-gradient(135deg, #ff4d00, #ff7700);
+        }
+        .catalogo {
+            padding: 40px;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .video-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .video-item img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #161b22;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Miraculous+</h1>
+        <div class="logo">Miraculous+</div>
         <nav>
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Catálogo</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
                 <li><a href="#">Minha Conta</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="banner">
-            <h2>Bem-vindo ao Miraculous+</h2>
-            <p>Seu streaming exclusivo do universo Miraculous!</p>
-        </section>
-        <section class="catalogo">
-            <h2>Catálogo</h2>
-            <div class="grid">
-                <div class="video-item">
-                    <img src="placeholder.jpg" alt="Thumbnail">
-                    <p>Nome do Episódio</p>
-                </div>
-                <div class="video-item">
-                    <img src="placeholder.jpg" alt="Thumbnail">
-                    <p>Nome do Episódio</p>
-                </div>
+    
+    <section class="banner">
+        <h1>Bem-vindo ao Miraculous+</h1>
+        <p>Seu streaming exclusivo do universo Miraculous!</p>
+    </section>
+    
+    <section id="catalogo" class="catalogo">
+        <h2>Catálogo</h2>
+        <div class="grid">
+            <div class="video-item">
+                <img src="episodio1.jpg" alt="Episódio 1">
+                <p>Episódio 1</p>
             </div>
-        </section>
-    </main>
+            <div class="video-item">
+                <img src="episodio2.jpg" alt="Episódio 2">
+                <p>Episódio 2</p>
+            </div>
+            <div class="video-item">
+                <img src="episodio3.jpg" alt="Episódio 3">
+                <p>Episódio 3</p>
+            </div>
+        </div>
+    </section>
+    
     <footer>
-        <p>&copy; 2025 Miraculous+. Todos os direitos reservados.</p>
+        &copy; 2025 Miraculous+. Todos os direitos reservados.
     </footer>
 </body>
 </html>
